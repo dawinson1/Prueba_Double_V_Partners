@@ -10,6 +10,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Prueba_Double_V_Partners", 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "API_DB_Double_V_Partners", "API_DB_Double_V_Partners\API_DB_Double_V_Partners.csproj", "{FC1FA731-910A-47D4-B150-8A2CC3155BF8}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BKDB", "BKDB", "{82E8FB56-5BDF-4D0E-BBAE-11A8AD2DBEF3}"
+	ProjectSection(SolutionItems) = preProject
+		..\..\Bk_Double_V_Partners.bak = ..\..\Bk_Double_V_Partners.bak
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
