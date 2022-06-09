@@ -1,0 +1,28 @@
+﻿@model Usuarios
+
+@{
+    ViewData["Title"] = "Iniciar Sesión";
+}
+
+<h1>Login</h1>
+
+<div asp-validation-summary="All" class="text-danger"></div>
+
+<form asp-controller="Prueba" asp-action="Login">
+    <div class="mb-3">
+        <label asp-for="Usuario" class="form-label"></label>
+        <input type="text" asp-for="Usuario" class="form-control" />
+        <span asp-validation-for="Usuario" class="text-danger"></span>
+    </div>
+    <div class="mb-3">
+        <label asp-for="Pass" class="form-label"></label>
+        <input type="password" asp-for="Pass" class="form-control" />
+        <span asp-validation-for="Pass" class="text-danger"></span>
+    </div>
+    <button type="submit" class="btn btn-primary">Crear</button>
+</form>
+
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial"></partial>
+}

@@ -1,0 +1,58 @@
+﻿@model Cuenta
+
+@{
+    ViewData["Title"] = "Crear Tipo Cuenta";
+}
+
+<h1>Crear Persona y Usuario</h1>
+
+<div asp-validation-summary="All" class="text-danger"></div>
+
+<form asp-controller="Prueba" asp-action="Crear">
+    <div class="mb-3">
+        <label asp-for="Persona.Nombres" class="form-label"></label>
+        <input type="text" asp-for="Persona.Nombres" class="form-control" />
+        <span asp-validation-for="Persona.Nombres" class="text-danger"></span>
+    </div>
+    <div class="mb-3">
+        <label asp-for="Persona.Apellidos" class="form-label"></label>
+        <input type="text" asp-for="Persona.Apellidos" class="form-control" />
+        <span asp-validation-for="Persona.Apellidos" class="text-danger"></span>
+    </div>
+    <div class="mb-3">
+        <label asp-for="Persona.Numero_Identificacion" class="form-label"></label>
+        <input type="text" asp-for="Persona.Numero_Identificacion" class="form-control" />
+        <span asp-validation-for="Persona.Numero_Identificacion" class="text-danger"></span>
+    </div>
+    <div class="mb-3">
+        <label asp-for="Persona.Email" class="form-label"></label>
+        <input asp-for="Persona.Email" class="form-control" />
+        <span asp-validation-for="Persona.Email" class="text-danger"></span>
+    </div>
+    <div class="mb-3">
+        <label asp-for="Persona.Tipo_Identificacion" class="form-label"></label>
+        <select class="form-select" asp-for="Persona.Tipo_Identificacion">
+              <option value ="CC" selected>Cédula de ciudadania</option>
+              <option value ="TI">Tarjeta de Identidad</option>
+              <option value="CE">Cédula de extranjería</option> 
+              <option value="NIT">NIT</option> 
+              <option value="RUT">RUT</option>
+        </select>
+    </div>
+    <div class="mb-3">
+        <label asp-for="Usuario.Usuario" class="form-label"></label>
+        <input type="text" asp-for="Usuario.Usuario" class="form-control" />
+        <span asp-validation-for="Usuario.Usuario" class="text-danger"></span>
+    </div>
+    <div class="mb-3">
+        <label asp-for="Usuario.Pass" class="form-label"></label>
+        <input type="password" asp-for="Usuario.Pass" class="form-control" />
+        <span asp-validation-for="Usuario.Pass" class="text-danger"></span>
+    </div>
+    <button type="submit" class="btn btn-primary">Crear</button>
+</form>
+
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial"></partial>
+}
